@@ -10,7 +10,6 @@ import {
 import BarChart from "@/components/BarChart";
 import PieChart from "@/components/PieChart";
 import CustomerList from "@/components/CustomerList";
-import { Noto_Sans } from "next/font/google";
 
 export default function Home() {
   const navMenu = [
