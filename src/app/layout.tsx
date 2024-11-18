@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Crete_Round, Inter, Noto_Sans } from "next/font/google";
 import "./globals.css";
-import { Provider } from "react-redux";
 
 const creteRound = Crete_Round({ subsets: ["latin"], weight: ["400"] });
 const inter = Inter({
