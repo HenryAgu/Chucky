@@ -1,5 +1,5 @@
 import { FaEllipsisH } from "react-icons/fa";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -11,8 +11,6 @@ import BarChart from "@/components/BarChart";
 import PieChart from "@/components/PieChart";
 import CustomerList from "@/components/CustomerList";
 import { Noto_Sans } from "next/font/google";
-
-const notoSans = Noto_Sans({ subsets: ["latin"] });
 
 export default function Home() {
   const navMenu = [
