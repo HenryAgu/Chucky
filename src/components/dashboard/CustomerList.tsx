@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { ScrollArea } from "./ui/scroll-area";
+import { ScrollArea } from "../ui/scroll-area";
+
 
 const customerList = [
   {
