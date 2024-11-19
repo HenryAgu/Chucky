@@ -1,14 +1,27 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Sidebar from "@/components/dashboard/Sidebar";
-import { CiMenuFries } from "react-icons/ci";
+import { RiMenu3Fill } from "react-icons/ri";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className="flex xl:flex-row flex-col w-full xl:w-screen xl:h-screen overflow-hidden">
       {/* Aside */}
-      <Sidebar />
+      <div className="hidden xl:flex">
+        <Sidebar />
+      </div>
+      <div className={`fixed top-0 left-0 h-screen w-full bg-[#0C1A240A] text-white transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out`}>
+          eee
+        </div>
       {/* Main bar */}
       <main className="w-full xl:w-[calc(100vw-271px)] h-screen overflow-hidden">
         <header className="flex flex-col-reverse gap-y-5 xl:flex-row xl:items-end justify-between py-5 xl:py-3.5 px-3 xl:px-5 shadow-md mt-3 xl:mt-0">
@@ -36,8 +49,8 @@ const layout = ({ children }: { children: React.ReactNode }) => {
           </div>
           <div className="flex items-center justify-between xl:justify-start xl:gap-x-8">
             <div>
-              <button>
-                <CiMenuFries className="flex xl:hidden font-bold text-2xl" />
+              <button onClick={toggleSidebar}>
+                <RiMenu3Fill className="flex xl:hidden font-bold text-2xl" />
               </button>
             </div>
             <div className="flex items-center gap-x-2 border py-2.5 px-5 rounded-xl">
