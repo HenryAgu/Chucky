@@ -1,9 +1,22 @@
-import React from 'react'
+import Header from "@/components/todo-list/Header";
+import TodoBody from "@/components/todo-list/TodoBody";
+import { Metadata } from "next";
+import React from "react";
 
-const page = () => {
+export const metadata: Metadata = {
+  title: "Todo List | Welcome To Todo List",
+  description: "...",
+};
+
+const TodoList = () => {
   return (
-    <div>TODO LIST</div>
-  )
-}
+    <div className="flex flex-col items-center justify-center w-screen h-screen">
+      <div className="md:max-w-[300px] max-w-full w-[95%] shadow-md rounded-lg p-5">
+        <Header />
+        <TodoBody />
+      </div>
+    </div>
+  );
+};
 
-export default page
+export default TodoList;
