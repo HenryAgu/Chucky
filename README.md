@@ -6,10 +6,12 @@ A simple React-based Todo List application built with TypeScript, designed for m
 
 ## 🚀 Live Links
 
-- **Todo List App**: [https://chucky-ten.vercel.app/todo-list](https://chucky-ten.vercel.app/todo-list)  
+- **Todo List App**: [https://chucky-ten.vercel.app/todo-list](https://chucky-ten.vercel.app/todo-list)
+  ![image](https://github.com/user-attachments/assets/0da12c3d-6d59-4ae5-af89-4fa111a8d4d5)
   Manage your daily tasks efficiently with this intuitive and user-friendly Todo List.
 
-- **Dashboard**: [https://chucky-ten.vercel.app/dashboard](https://chucky-ten.vercel.app/dashboard)  
+- **Dashboard**: [https://chucky-ten.vercel.app/dashboard](https://chucky-ten.vercel.app/dashboard)
+  ![image](https://github.com/user-attachments/assets/d2971574-6f6a-4777-9dde-f2f2bf55f6eb)
   Explore additional functionalities and features in the Dashboard.
 
 ---
