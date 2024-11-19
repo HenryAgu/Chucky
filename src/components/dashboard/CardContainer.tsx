@@ -3,7 +3,7 @@ import React from "react";
 
 const CardContainer = () => {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-4 gap-y-5 xl:gap-x-5 my-5 w-full">
+    <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-5 md:gap-x-5 my-5 w-full">
       <div className="shadow-md p-5 rounded-md flex flex-col gap-y-5 bg-white">
         <Image src="/images/Paper.svg" alt="icon" width={24} height={24} />
 

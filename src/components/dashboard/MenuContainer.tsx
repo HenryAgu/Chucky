@@ -91,7 +91,7 @@ const MenuContainer = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-y-5 xl:grid-cols-4 gap-x-5 mt-5 w-full">
+      <div className="grid grid-cols-1 gap-y-5 md:grid-cols-2 xl:grid-cols-4 gap-x-5 mt-5 w-full">
         {foodMenu.map((food) => (
           <div className="object-contain bg-cover bg-center bg-no-repeat rounded-md h-[240px] p-3 flex items-end" key={food.id} style={{backgroundImage: `url(${food.image})`}}>
             <div className="border rounded-md border-white p-3 flex justify-between  bg-white/50 backdrop-blur-md border-white/20 shadow-[0_4px_6px_-2px_rgba(30,41,59,0.3),0_12px_16px_-4px_rgba(30,41,59,0.3)] w-full">

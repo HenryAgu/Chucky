@@ -281,7 +281,7 @@ const Sidebar = () => {
       <aside className="py-5 px-3 flex xl:hidden items-center gap-x-3 justify-between relative">
         {/* Sidebar */}
         <div
-          className={`fixed top-0 left-0 h-screen w-11/12 shadow-md bg-[#f7f8fa] text-black transform ${
+          className={`fixed top-0 left-0 h-screen w-11/12 md:w-[70%] shadow-md bg-[#f7f8fa] text-black transform ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out z-50`}
         >

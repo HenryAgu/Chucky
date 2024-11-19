@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 const CustomerDetailsContainer = () => {
   return (
-    <section className="flex flex-col xl:flex-row gap-y-5 xl:gap-x-5 mt-5 w-full">
-    <div className="w-full xl:basis-[75%] shadow-md rounded-md">
+    <section className="flex flex-col md:flex-row gap-y-5 md:gap-x-5 mt-5 w-full">
+    <div className="w-full md:basis-[60%] xl:basis-[75%] shadow-md rounded-md">
       <div className="">
         <h3 className="font-[inter] text-lg text-[#081735] font-bold border-b p-5">
           Customer Map
@@ -17,11 +17,11 @@ const CustomerDetailsContainer = () => {
           alt="map"
           height={320}
           width={750}
-          className="object-cover xl:object-contain w-full h-[250px] xl:h-auto"
+          className="object-cover xl:object-contain w-full h-[250px] xl:h-full"
         />
       </div>
     </div>
-    <div className="w-full xl:basis-[35%] shadow-md rounded-md p-5">
+    <div className="w-full md:basis-[40%] xl:basis-[35%] shadow-md rounded-md p-5">
       <h3 className="font-[inter] font-bold text-lg text-[#081735]">
         Customers List
       </h3>
