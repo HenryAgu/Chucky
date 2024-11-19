@@ -1,38 +1,38 @@
 import React from "react";
 
 const MenuContainer = () => {
-  // const foodMenu = [
-  //   {
-  //     id: crypto.randomUUID(),
-  //     title: "Chicken & Ribs Combo",
-  //     price: "89.24",
-  //     served: "496",
-  //     image: "/images/menu4.jpg",
-  //   },
-  //   {
-  //     id: crypto.randomUUID(),
-  //     title: "Chicken & Ribs Combo",
-  //     price: "89.24",
-  //     served: "496",
-  //     image: "/images/menu5.jpg",
-  //   },
-  //   {
-  //     id: crypto.randomUUID(),
-  //     title: "Chicken & Ribs Combo",
-  //     price: "89.24",
-  //     served: "496",
-  //     image: "/images/menu6.jpg",
-  //   },
-  //   {
-  //       id: crypto.randomUUID(),
-  //       title: "Chicken & Ribs Combo",
-  //       price: "89.24",
-  //       served: "496",
-  //       image: "/images/menu6.jpg",
-  //     },
-  // ];
+  const foodMenu = [
+    {
+      id: crypto.randomUUID(),
+      title: "Chicken & Ribs Combo",
+      price: "89.24",
+      served: "496",
+      image: "/images/menu4.jpg",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Chicken & Ribs Combo",
+      price: "89.24",
+      served: "496",
+      image: "/images/menu5.jpg",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Chicken & Ribs Combo",
+      price: "89.24",
+      served: "496",
+      image: "/images/menu6.jpg",
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "Chicken & Ribs Combo",
+        price: "89.24",
+        served: "496",
+        image: "/images/menu6.jpg",
+      },
+  ];
   return (
-    <section className="shadow-md flex flex-col rounded-md mt-5 w-full p-3 xl:p-5 pb-14 xl:mb-0">
+    <section className="shadow-md flex flex-col-reverse xl:flex-col rounded-md mt-5 w-full p-3 xl:p-5 pb-14 xl:mb-0">
       <div className="flex flex-col gap-y-2 border-b">
         <h3 className="px-2 font-[inter] text-[#081735] font-bold text-lg">
           Menu
@@ -91,9 +91,9 @@ const MenuContainer = () => {
         </div>
       </div>
 
-      {/* <div className="flex gap-x-5 mt-5 overflow-x-auto w-full">
+      <div className="grid grid-cols-1 gap-y-5 xl:grid-cols-4 gap-x-5 mt-5 w-full">
         {foodMenu.map((food) => (
-          <div className="object-contain bg-cover bg-center bg-no-repeat bg-[url('/images/menu2.jpg')] rounded-md h-[240px] p-3 flex items-end w-[280px] shrink-0">
+          <div className="object-contain bg-cover bg-center bg-no-repeat bg-[url('/images/menu2.jpg')] rounded-md h-[240px] p-3 flex items-end">
             <div className="border rounded-md border-white p-3 flex justify-between  bg-white/50 backdrop-blur-md border-white/20 shadow-[0_4px_6px_-2px_rgba(30,41,59,0.3),0_12px_16px_-4px_rgba(30,41,59,0.3)] w-full">
               <div>
                 <h5 className="font-[inter] font-medium text-sm text-[#1E293B]">
@@ -113,7 +113,7 @@ const MenuContainer = () => {
             </div>
           </div>
         ))}
-      </div> */}
+      </div>
     </section>
   );
 };

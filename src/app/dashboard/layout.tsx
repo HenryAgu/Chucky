@@ -81,7 +81,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
 
         {/* For mobile */}
         <header className="xl:hidden flex p-5 w-full">
-          <div className="flex flex-col gap-y-2 items-start justify-between">
+          <div className="flex flex-col gap-y-3.5 items-start justify-between">
             <div className="xl:hidden flex items-center gap-x-3.5">
               <Image
                 src="/images/Avatar.svg"
