@@ -329,12 +329,6 @@ const Sidebar = () => {
               width={14}
               height={14}
             />
-            <Image
-              src="/images/Message.svg"
-              alt="icon"
-              width={14}
-              height={14}
-            />
           </div>
           <div className="hidden xl:flex items-center gap-x-3.5">
             <Image

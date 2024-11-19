@@ -4,7 +4,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import Sidebar from "@/components/dashboard/Sidebar";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
-
   return (
     <div className="flex xl:flex-row flex-col w-full xl:w-screen xl:h-screen overflow-hidden">
       {/* Aside */}
@@ -79,6 +78,8 @@ const layout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
         </header>
+
+        {/* For mobile */}
         <header className="xl:hidden flex p-5 w-full">
           <div className="flex flex-col gap-y-2 items-start justify-between">
             <div className="xl:hidden flex items-center gap-x-3.5">
