@@ -93,21 +93,21 @@ const MenuContainer = () => {
 
       <div className="grid grid-cols-1 gap-y-5 xl:grid-cols-4 gap-x-5 mt-5 w-full">
         {foodMenu.map((food) => (
-          <div className="object-contain bg-cover bg-center bg-no-repeat bg-[url('/images/menu2.jpg')] rounded-md h-[240px] p-3 flex items-end">
+          <div className="object-contain bg-cover bg-center bg-no-repeat rounded-md h-[240px] p-3 flex items-end" key={food.id} style={{backgroundImage: `url(${food.image})`}}>
             <div className="border rounded-md border-white p-3 flex justify-between  bg-white/50 backdrop-blur-md border-white/20 shadow-[0_4px_6px_-2px_rgba(30,41,59,0.3),0_12px_16px_-4px_rgba(30,41,59,0.3)] w-full">
               <div>
                 <h5 className="font-[inter] font-medium text-sm text-[#1E293B]">
-                  Shaking Beef Tri-Tip
+                  {food.title}
                 </h5>
                 <span className="font-[inter] font-normal text-xs text-chucky-gray-100">
-                  456 served
+                 {food.served} served
                 </span>
               </div>
               <div>
                 <p
                   className={`font-[inter] font-medium text-sm text-[#1E293B]`}
                 >
-                  $69.47
+                  ${food.price}
                 </p>
               </div>
             </div>
