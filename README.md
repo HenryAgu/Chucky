@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Todo List Project
 
-## Getting Started
+A simple React-based Todo List application built with TypeScript, designed for managing tasks with features to **add**, **edit**, **delete**, and **view** todos. The project also includes a basic **dashboard** page for extended functionality.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Links
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Todo List App**: [https://chucky-ten.vercel.app/todo-list](https://chucky-ten.vercel.app/todo-list)  
+  Manage your daily tasks efficiently with this intuitive and user-friendly Todo List.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Dashboard**: [https://chucky-ten.vercel.app/dashboard](https://chucky-ten.vercel.app/dashboard)  
+  Explore additional functionalities and features in the Dashboard.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📚 Features
 
-To learn more about Next.js, take a look at the following resources:
+### Todo List
+- **Add New Todos**: Quickly create tasks with a unique ID and title.
+- **Edit Existing Todos**: Modify task titles seamlessly in edit mode.
+- **Delete Todos**: Remove tasks with a single click.
+- **View All Todos**: Display a list of tasks dynamically updated in real-time.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Dashboard
+- Placeholder for extended project features and analytics (expandable in future iterations).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **React** with **TypeScript**
+- **Tailwind CSS** for styling
+- **Vercel** for deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📄 How to Use
+
+1. Visit the [Todo List App](https://chucky-ten.vercel.app/todo-list) to manage your tasks:
+   - Add tasks using the input field.
+   - Edit tasks by clicking the pencil icon.
+   - Delete tasks by clicking the trash icon.
+2. Explore the [Dashboard](https://chucky-ten.vercel.app/dashboard) for additional features.
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+### 💻 Author
+
+- Henry Agu
