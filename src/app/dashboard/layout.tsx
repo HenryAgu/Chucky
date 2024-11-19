@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Sidebar from "@/components/dashboard/Sidebar";
+import { CiMenuFries } from "react-icons/ci";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -10,7 +11,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       <Sidebar />
       {/* Main bar */}
       <main className="w-full xl:w-[calc(100vw-271px)] h-screen overflow-hidden">
-        <header className="flex flex-col-reverse gap-y-8 xl:flex-row xl:items-end justify-between py-3.5 px-5 shadow-md">
+        <header className="flex flex-col-reverse gap-y-8 xl:flex-row xl:items-end justify-between py-3.5 px-3 xl:px-5 shadow-md mt-5 xl:mt-0">
           <div>
             <h1 className="font-[inter] font-bold text-black text-3xl xl:text-2xl">
               Hi, Taylor!
@@ -19,7 +20,12 @@ const layout = ({ children }: { children: React.ReactNode }) => {
               Let’s check your store today
             </p>
           </div>
-          <div className="flex items-center gap-x-8">
+          <div className="flex items-center justify-between xl:justify-start xl:gap-x-8">
+            <div>
+              <button>
+                <CiMenuFries className="flex xl:hidden font-bold text-2xl" />
+              </button>
+            </div>
             <div className="flex items-center gap-x-2 border py-2.5 px-5 rounded-xl">
               <Image
                 src="/images/Search.svg"
@@ -33,7 +39,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
                 className="outline-transparent"
               />
             </div>
-            <div className="flex items-center gap-x-20">
+            <div className="flex items-center xl:gap-x-20">
               <div className="hidden xl:flex items-center gap-x-3.5">
                 <Image
                   src="/images/Notification.svg"
@@ -54,7 +60,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
                   alt="icon"
                   width={48}
                   height={48}
-                  className="w-[48px] h-[48px] aspect-[48/48] object-contain"
+                  className="w-[48px] h-[48px] aspect-[48/48] shadow-sm object-contain"
                 />
                 <h5 className="font-bold font-[inter] text-base hidden xl:block">
                   Tynisha Obey
@@ -64,7 +70,9 @@ const layout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </header>
         <ScrollArea className="h-[90vh]">
-          <div className="p-3 pr-5 pb-14 bg-[#F8F9FB] w-screen xl:w-full">{children}</div>
+          <div className="p-3 pr-5 pb-14 bg-[#F8F9FB] w-screen xl:w-full">
+            {children}
+          </div>
         </ScrollArea>
       </main>
     </div>
