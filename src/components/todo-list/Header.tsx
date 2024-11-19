@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ addTodo }) => {
   };
   return (
     <form
-      className="flex items-center gap-x-2 border-2  py-4 px-2  rounded-lg"
+      className="flex items-center gap-x-2 border-2 border-[#EFEFEF]  py-4 px-2  rounded-lg"
       onSubmit={handleSubmit}
     >
       <input

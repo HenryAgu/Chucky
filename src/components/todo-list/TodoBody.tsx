@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { FiEdit2, FiTrash2 } from "react-icons/fi";
 
 interface Todo {
@@ -21,7 +21,7 @@ const TodoBody: React.FC<TodoBodyProps> = ({ todo, setTodo }) => {
       <div className="flex flex-col gap-y-2">
         {todo.map((item) => (
           <div
-            className="border-2  p-3 rounded-lg flex items-center justify-between"
+            className="border-2 border-[#EFEFEF] p-3 rounded-lg flex items-center justify-between"
             key={item.id}
           >
             <p className="text-sm font-semibold text-[#2D2D2D]">{item.title}</p>
