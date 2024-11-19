@@ -292,14 +292,18 @@ const Sidebar = () => {
             >
               <RiCloseLargeFill />
             </button>
-            <nav>
-              <ul className="flex flex-col gap-y-3">
-                <li className="hover:underline cursor-pointer">Menu Item 1</li>
-                <li className="hover:underline cursor-pointer">Menu Item 2</li>
-                <li className="hover:underline cursor-pointer">Menu Item 3</li>
-                <li className="hover:underline cursor-pointer">Menu Item 4</li>
-              </ul>
-            </nav>
+            <nav className="mt-14 flex flex-col gap-y-3.5 h-[400px]  pr-10">
+            {navMenu.map((menu) => (
+              <Link href={menu.path} key={menu.id}>
+                <button className="group flex items-center gap-x-3.5 bg-white hover:bg-chucky-primary active:bg-chucky-primary transition duration-300 ease-in-out rounded-xl p-5 w-full">
+                  {menu.icon}
+                  <span className="font-[inter] text-chucky-gray-300 group-hover:text-white group-active:text-white font-bold transition ease-in-out">
+                    {menu.title}
+                  </span>
+                </button>
+              </Link>
+            ))}
+          </nav>
           </div>
         </div>
 
