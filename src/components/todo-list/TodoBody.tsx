@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 import { FiCheck, FiEdit2, FiTrash2,FiX } from "react-icons/fi";
 
@@ -40,11 +41,11 @@ const TodoBody: React.FC<TodoBodyProps> = ({ todo, setTodo }) => {
     setTodo((prev) => prev.filter((item) => item.id !== id));
   };
   return (
-    <div className="mt-8 rounded-lg">
+    <div className="mt-5 rounded-lg">
       <div className="flex flex-col gap-y-2">
         {todo.map((item) => (
           <div
-            className="border-2 border-[#EFEFEF] p-3 rounded-lg flex items-center justify-between"
+            className="border-b border-[#E5E5E5] p-3 flex items-center justify-between"
             key={item.id}
           >
             {editId === item.id ? (
@@ -54,7 +55,7 @@ const TodoBody: React.FC<TodoBodyProps> = ({ todo, setTodo }) => {
                   type="text"
                   value={editTitle}
                   onChange={(e) => setEditTitle(e.target.value)}
-                  className="border p-1 rounded-lg w-[80%]"
+                  className="p-1 rounded-lg w-[80%]"
                 />
                 <button
                   onClick={() => saveEdit(item.id)}
@@ -71,19 +72,19 @@ const TodoBody: React.FC<TodoBodyProps> = ({ todo, setTodo }) => {
               </div>
             ) : (
               <>
-                <p className="text-sm font-semibold flex-1">{item.title}</p>
+                <p className="text-[13px] font-semibold flex-1">{item.title}</p>
                 <div className="flex items-center gap-x-3.5">
                   <button
                     onClick={() => handleEdit(item.id, item.title)}
                     className="text-[#2D2D2D] hover:text-blue-700"
                   >
-                    <FiEdit2 className="text-xl" />
+                    <Image src="/images/todo-edit.svg" alt="delete icon" width={16} height={16}/>
                   </button>
                   <button
                     onClick={() => handleDelete(item.id)}
                     className="text-[#2D2D2D] hover:text-red-700"
                   >
-                    <FiTrash2 className="text-xl" />
+                    <Image src="/images/todo-delete.svg" alt="delete icon" width={16} height={16}/>
                   </button>
                 </div>
               </>

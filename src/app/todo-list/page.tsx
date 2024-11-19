@@ -25,8 +25,8 @@ const TodoList: React.FC = () => {
     setTodo((prev) => [...prev, newTodo]);
   };
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen bg-[#f8f8f8]">
-      <div className="md:max-w-[320px] max-w-full w-[95%] border border-[#f6f6f6] shadow-md rounded-lg p-5 pb-10">
+    <div className="flex flex-col items-center justify-center w-screen h-screen bg-[#F8F8F8]">
+      <div className="md:max-w-[400px] max-w-full w-[95%] border border-[#E5E5E5]  shadow-md bg-white rounded-2xl p-5 pb-10">
         <Header addTodo={addTodo}/>
         <TodoBody todo={todo} setTodo={setTodo} />
       </div>
