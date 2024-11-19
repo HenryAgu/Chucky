@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import React from "react";
 import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
+import Image from "next/image";
 
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
@@ -59,7 +60,7 @@ const PieChart: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center font-[inter]">
+    <div className="flex flex-col xl:flex-row items-center justify-center font-[inter]">
       {/* Render the donut chart */}
       <ReactApexChart
         options={options}
@@ -69,26 +70,26 @@ const PieChart: React.FC = () => {
       />
 
       {/* Additional Metrics */}
-      <div className="mt-8 flex flex-col gap-y-5">
+      <div className="mt-8 flex xl:flex-col gap-y-5">
         {/* Daily Customers */}
-        <div className="flex items-center space-x-4">
-          <div className="w-12 h-12 rounded-full bg-[#775DD0]/10 flex items-center justify-center">
-            <span className="text-[#775DD0] font-[inter] font-bold text-lg">+18%</span>
-          </div>
+        <div className="flex flex-col justify-center xl:justify-start xl:flex-row items-center space-x-4 text-center xl:text-left">
+          <Image src="/images/Charts1.svg" alt="icon" width={70} height={70} className="w-[40px] h-[50px] xl:w-[80px] xl:h-[80px] mb-2 xl:mb-0"/>
           <div>
             <p className="font-bold">+18%</p>
-            <p className="text-sm text-gray-500 font-[inter]">Daily customers</p>
+            <p className="text-sm text-gray-500 font-[inter]">
+              Daily customers
+            </p>
           </div>
         </div>
 
         {/* Weekly New Customers */}
-        <div className="flex items-center space-x-4">
-          <div className="w-12 h-12 rounded-full bg-[#00E396]/10 flex items-center justify-center">
-            <span className="text-[#00E396] font-bold text-lg font-[inter]">+14%</span>
-          </div>
+        <div className="flex flex-col justify-center xl:justify-start xl:flex-row items-center space-x-4 text-center xl:text-left">
+        <Image src="/images/Charts2.svg" alt="icon" width={70} height={70} className="w-[40px] h-[50px] xl:w-[80px] xl:h-[80px] mb-2 xl:mb-0"/>
           <div>
             <p className="font-bold">+14%</p>
-            <p className="text-sm text-gray-500 font-[inter]">Weekly new customers</p>
+            <p className="text-sm text-gray-500 font-[inter]">
+              Weekly new customers
+            </p>
           </div>
         </div>
       </div>

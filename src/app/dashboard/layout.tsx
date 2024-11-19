@@ -11,7 +11,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       <Sidebar />
       {/* Main bar */}
       <main className="w-full xl:w-[calc(100vw-271px)] h-screen overflow-hidden">
-        <header className="flex flex-col-reverse gap-y-8 xl:flex-row xl:items-end justify-between py-3.5 px-3 xl:px-5 shadow-md mt-5 xl:mt-0">
+        <header className="flex flex-col-reverse gap-y-8 xl:flex-row xl:items-end justify-between py-3.5 px-3 xl:px-5 shadow-md mt-3 xl:mt-0">
           <div>
             <h1 className="font-[inter] font-bold text-black text-3xl xl:text-2xl">
               Hi, Taylor!
