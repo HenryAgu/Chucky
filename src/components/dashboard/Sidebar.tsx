@@ -1,7 +1,9 @@
+"use client";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import MobileSideBar from "./MobileSideBar";
 
 const Sidebar = () => {
   const navMenu = [
@@ -203,69 +205,74 @@ const Sidebar = () => {
     },
   ];
   return (
-    <aside className="w-full block md:w-[271px] h-screen py-10 pl-5">
-      <div className="flex gap-x-3.5 pb-2">
-        <Image
-          src="/images/Logo.png"
-          alt="Logo"
-          width={50}
-          height={50}
-          className="w-[49px] h-[49px]"
-          priority
-        />
-        <div>
-          <h1 className="text-2xl font-[creteRound] text-[#2D2D2D] font-normal">
-            Chucky
-          </h1>
-          <h5 className="text-sm font-[creteRound] text-[#2D2D2D] font-normal">
-            Admin Dashboard
-          </h5>
-        </div>
-      </div>
-      <ScrollArea className="h-[600px]">
-        <nav className="mt-14 flex flex-col gap-y-3.5 h-[400px]  pr-10">
-          {navMenu.map((menu) => (
-            <Link href={menu.path} key={menu.id}>
-              <button className="group flex items-center gap-x-3.5 bg-white hover:bg-chucky-primary active:bg-chucky-primary transition duration-300 ease-in-out rounded-xl p-5 w-full">
-                {menu.icon}
-                <span className="font-[inter] text-chucky-gray-300 group-hover:text-white group-active:text-white font-bold transition ease-in-out">
-                  {menu.title}
-                </span>
-              </button>
-            </Link>
-          ))}
-        </nav>
-        <div className="p-4 flex flex-col gap-y-2 shadow-lg mt-2 mb-10 mr-8 rounded-[10px] bg-[#F8F9FB]">
-          <div className=" flex items-end justify-end text-right">
-            <Image
-              src="/images/close.svg"
-              width={20}
-              height={20}
-              className="w-5 h-5"
-              alt="close-icon"
-            />
-          </div>
+    <div className="">
+      <aside className="w-full hidden xl:block md:w-[271px] h-screen py-10 pl-5">
+        <div className="flex gap-x-3.5 pb-2">
+          <Image
+            src="/images/Logo.png"
+            alt="Logo"
+            width={50}
+            height={50}
+            className="w-[49px] h-[49px]"
+            priority
+          />
           <div>
-            <Image
-              src="/images/Progress.svg"
-              width={58}
-              height={58}
-              className="w-[58px] h-[58px]"
-              alt="icon"
-            />
+            <h1 className="text-2xl font-[creteRound] text-[#2D2D2D] font-normal">
+              Chucky
+            </h1>
+            <h5 className="text-sm font-[creteRound] text-[#2D2D2D] font-normal">
+              Admin Dashboard
+            </h5>
           </div>
-          <h5 className="font-[inter] text-sm font-semibold text-chucky-black-300">
-            Subscription Plan
-          </h5>
-          <p className="font-[inter] text-sm max-w-[200px]">
-            Your Subscription plan will expire soon please upgrade!
-          </p>
-          <span className="font-[inter] text-sm text-chucky-primary font-semibold">
-            Upgrade
-          </span>
         </div>
-      </ScrollArea>
-    </aside>
+        <ScrollArea className="h-[600px]">
+          <nav className="mt-14 flex flex-col gap-y-3.5 h-[400px]  pr-10">
+            {navMenu.map((menu) => (
+              <Link href={menu.path} key={menu.id}>
+                <button className="group flex items-center gap-x-3.5 bg-white hover:bg-chucky-primary active:bg-chucky-primary transition duration-300 ease-in-out rounded-xl p-5 w-full">
+                  {menu.icon}
+                  <span className="font-[inter] text-chucky-gray-300 group-hover:text-white group-active:text-white font-bold transition ease-in-out">
+                    {menu.title}
+                  </span>
+                </button>
+              </Link>
+            ))}
+          </nav>
+          <div className="p-4 flex flex-col gap-y-2 shadow-lg mt-2 mb-10 mr-8 rounded-[10px] bg-[#F8F9FB]">
+            <div className=" flex items-end justify-end text-right">
+              <Image
+                src="/images/close.svg"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+                alt="close-icon"
+              />
+            </div>
+            <div>
+              <Image
+                src="/images/Progress.svg"
+                width={58}
+                height={58}
+                className="w-[58px] h-[58px]"
+                alt="icon"
+              />
+            </div>
+            <h5 className="font-[inter] text-sm font-semibold text-chucky-black-300">
+              Subscription Plan
+            </h5>
+            <p className="font-[inter] text-sm max-w-[200px]">
+              Your Subscription plan will expire soon please upgrade!
+            </p>
+            <span className="font-[inter] text-sm text-chucky-primary font-semibold">
+              Upgrade
+            </span>
+          </div>
+        </ScrollArea>
+      </aside>
+
+      {/* Mobile */}
+      <MobileSideBar />
+    </div>
   );
 };
 

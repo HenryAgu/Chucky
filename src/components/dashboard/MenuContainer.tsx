@@ -32,9 +32,9 @@ const MenuContainer = () => {
   //     },
   // ];
   return (
-    <section className="shadow-md flex flex-col rounded-md mt-5 w-full p-3 xl:p-5 mb-14 xl:mb-0">
+    <section className="shadow-md flex flex-col rounded-md mt-5 w-full p-3 xl:p-5 pb-14 xl:mb-0">
       <div className="flex flex-col gap-y-2 border-b">
-        <h3 className="px-2 xl:px-5 font-[inter] text-[#081735] font-bold text-lg">
+        <h3 className="px-2 font-[inter] text-[#081735] font-bold text-lg">
           Menu
         </h3>
         <div className="flex items-center justify-end px-2 xl:px-5">
