@@ -10,9 +10,9 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       <Sidebar />
       {/* Main bar */}
       <main className="w-full xl:w-[calc(100vw-271px)] h-screen overflow-hidden">
-        <header className="flex items-end justify-between py-3.5 px-5 shadow-md">
+        <header className="flex flex-col-reverse gap-y-8 xl:flex-row xl:items-end justify-between py-3.5 px-5 shadow-md">
           <div>
-            <h1 className="font-[inter] font-bold text-black text-2xl">
+            <h1 className="font-[inter] font-bold text-black text-3xl xl:text-2xl">
               Hi, Taylor!
             </h1>
             <p className="font-[inter] text-sm font-normal text-chucky-gray-200">
@@ -34,7 +34,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
               />
             </div>
             <div className="flex items-center gap-x-20">
-              <div className="flex items-center gap-x-3.5">
+              <div className="hidden xl:flex items-center gap-x-3.5">
                 <Image
                   src="/images/Notification.svg"
                   alt="icon"
@@ -56,7 +56,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
                   height={48}
                   className="w-[48px] h-[48px] aspect-[48/48] object-contain"
                 />
-                <h5 className="font-bold font-[inter] text-base">
+                <h5 className="font-bold font-[inter] text-base hidden xl:block">
                   Tynisha Obey
                 </h5>
               </div>
