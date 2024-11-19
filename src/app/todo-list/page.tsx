@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const TodoList = () => {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen">
-      <div className="md:max-w-[300px] max-w-full w-[95%] shadow-md rounded-lg p-5">
+      <div className="md:max-w-[320px] max-w-full w-[95%] shadow-md rounded-lg p-5 pb-10">
         <Header />
         <TodoBody />
       </div>

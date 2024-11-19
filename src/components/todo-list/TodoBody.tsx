@@ -1,8 +1,9 @@
-import React from "react";
-import { FaCircleMinus } from "react-icons/fa6";
+"use client"
+import React, { useState } from "react";
+import { FiEdit2, FiTrash2 } from "react-icons/fi";
 
 const TodoBody = () => {
-  const todo = [
+  const [todo, setTodo] = useState([
     {
       id: crypto.randomUUID(),
       title: "Praise the lord",
@@ -19,16 +20,22 @@ const TodoBody = () => {
       id: crypto.randomUUID(),
       title: "Take some more",
     },
-  ];
+  ]);
   return (
-    <div className="mt-3 rounded-lg">
+    <div className="mt-5 rounded-lg">
       <div className="flex flex-col gap-y-2">
         {todo.map((todo) => (
-          <div className="border p-2 rounded-lg flex items-center justify-between" key={todo.id}>
-            <p className="text-xs font-semibold">{todo.title}</p>
-            <div>
+          <div
+            className="border p-3 rounded-lg flex items-center justify-between"
+            key={todo.id}
+          >
+            <p className="text-sm font-semibold">{todo.title}</p>
+            <div className="flex items-center gap-x-3.5">
               <button>
-                <FaCircleMinus />
+                <FiEdit2 className="text-xl" />
+              </button>
+              <button>
+                <FiTrash2 className="text-xl" />
               </button>
             </div>
           </div>
