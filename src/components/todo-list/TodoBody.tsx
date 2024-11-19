@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { FiCheck, FiEdit2, FiTrash2,FiX } from "react-icons/fi";
+import { FiCheck,FiX } from "react-icons/fi";
 
 interface Todo {
   id: string;
