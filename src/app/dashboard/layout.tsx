@@ -1,15 +1,15 @@
 import React from "react";
-import Sidebar from "./Sidebar";
 import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import Sidebar from "@/components/dashboard/Sidebar";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex xl:flex-row flex-col w-full overflow-hidden">
+    <div className="flex xl:flex-row flex-col w-full xl:w-screen xl:h-screen overflow-hidden">
       {/* Aside */}
       <Sidebar />
       {/* Main bar */}
-      <main className="grow basis-9/12 h-screen overflow-y-hidden">
+      <main className="w-full xl:w-[calc(100vw-271px)] h-screen overflow-hidden">
         <header className="flex items-end justify-between py-3.5 px-5 shadow-md">
           <div>
             <h1 className="font-[inter] font-bold text-black text-2xl">
@@ -64,7 +64,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </header>
         <ScrollArea className="h-[90vh]">
-          <div className="p-3 pr-5 pb-14 bg-[#F8F9FB]">{children}</div>
+          <div className="p-3 pr-5 pb-14 bg-[#F8F9FB] w-screen xl:w-full">{children}</div>
         </ScrollArea>
       </main>
     </div>

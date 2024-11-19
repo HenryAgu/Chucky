@@ -203,7 +203,7 @@ const Sidebar = () => {
     },
   ];
   return (
-    <aside className="w-full max-w-[320px] basis-[25%] h-screen py-10 pl-5">
+    <aside className="w-full hidden xl:block md:w-[271px] h-screen py-10 pl-5">
       <div className="flex gap-x-3.5 pb-2">
         <Image
           src="/images/Logo.png"
