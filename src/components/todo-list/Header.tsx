@@ -1,9 +1,8 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
 
 interface HeaderProps {
-  addTodo: (title: string) => void;
+  addTodo: (title: string) => void; 
 }
 
 const Header: React.FC<HeaderProps> = ({ addTodo }) => {
@@ -11,24 +10,27 @@ const Header: React.FC<HeaderProps> = ({ addTodo }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!input.trim()) return; 
+    addTodo(input); 
     setInput("");
-    addTodo(input);
   };
+
   return (
     <form
-      className="flex flex-col items-start gap-x-2  rounded-lg"
+      className="flex flex-col items-start gap-x-2 rounded-lg"
       onSubmit={handleSubmit}
     >
       <h3 className="font-bold text-2xl">Add New Task</h3>
       <div className="border-2 border-[#E5E5E5] bg-white flex items-center gap-x-2 justify-between w-full my-5 py-4 px-6 rounded-3xl">
         <input
           type="text"
+          value={input} // Bind input state
+          onChange={(e) => setInput(e.target.value)} // Update input state
           className="w-full outline-transparent text-[13px] font-medium text-[#999999] bg-transparent"
-          onChange={(e) => setInput(e.target.value)}
           placeholder="Add a new task..."
         />
-        <button>
-          <Image src="/images/add.svg" width={18} height={18} alt="icon"/>
+        <button type="submit">
+          <img src="/images/add.svg" alt="Add Todo" width={18} height={18} />
         </button>
       </div>
     </form>
