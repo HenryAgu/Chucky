@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ addTodo }) => {
       onSubmit={handleSubmit}
     >
       <h3 className="font-bold text-2xl">Add New Task</h3>
-      <div className="border-2 border-[#E5E5E5] bg-white flex items-center justify-between w-full my-5 py-4 px-6 rounded-3xl">
+      <div className="border-2 border-[#E5E5E5] bg-white flex items-center gap-x-2 justify-between w-full my-5 py-4 px-6 rounded-3xl">
         <input
           type="text"
           className="w-full outline-transparent text-[13px] font-medium text-[#999999] bg-transparent"

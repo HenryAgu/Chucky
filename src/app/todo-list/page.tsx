@@ -10,10 +10,7 @@ interface Todo {
 
 const TodoList: React.FC = () => {
   const [todo, setTodo] = useState<Todo[]>([
-    {
-      id: crypto.randomUUID(),
-      title: "Praise the lord",
-    },
+
   ]);
 
   const addTodo = (title: string) => {
