@@ -1,7 +1,7 @@
 "use client";
 import Header from "@/components/todo-list/Header";
 import TodoBody from "@/components/todo-list/TodoBody";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Todo {
   id: string;
@@ -9,12 +9,26 @@ interface Todo {
 }
 
 const TodoList: React.FC = () => {
-  const [todo, setTodo] = useState<Todo[]>([
+  const [todo, setTodo] = useState<Todo[]>([]);
 
-  ]);
+  useEffect(() => {
+    const storedTodos = localStorage.getItem("todo");
+    if (storedTodos) {
+      try {
+        const parsedTodos: Todo[] = JSON.parse(storedTodos);
+        setTodo(parsedTodos);
+      } catch (error) {
+        console.error("Failed to parse todos from localStorage:", error);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todo", JSON.stringify(todo));
+  }, [todo]);
 
   const addTodo = (title: string) => {
-    if (!title.trim()) return; 
+    if (!title.trim()) return;
     const newTodo: Todo = {
       id: crypto.randomUUID(),
       title,
@@ -24,7 +38,7 @@ const TodoList: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen bg-[#F8F8F8]">
       <div className="md:max-w-[400px] max-w-full w-[95%] border border-[#E5E5E5]  shadow-md bg-white rounded-2xl p-5 pb-10">
-        <Header addTodo={addTodo}/>
+        <Header addTodo={addTodo} />
         <TodoBody todo={todo} setTodo={setTodo} />
       </div>
     </div>
