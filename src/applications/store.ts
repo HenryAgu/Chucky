@@ -1,10 +1,12 @@
 "use client";
 import inputValueReducer from "@/applications/inputSlice/inputValueSlice";
+import todoReducer from "@/applications/todoSlice/todoSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
   reducer: {
     inputValue: inputValueReducer,
+    todos: todoReducer,
   },
 });
 

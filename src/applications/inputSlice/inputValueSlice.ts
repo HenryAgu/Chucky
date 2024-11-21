@@ -6,7 +6,7 @@ export interface InputValueState {
 }
 
 const initialState: InputValueState = {
-  value: "", // No localStorage, default value is an empty string
+  value: "", 
 };
 
 export const inputValueSlice = createSlice({
@@ -14,7 +14,7 @@ export const inputValueSlice = createSlice({
   initialState,
   reducers: {
     setInputValue: (state, action: PayloadAction<string>) => {
-      state.value = action.payload; // Update the state value
+      state.value = action.payload; 
     },
   },
 });
