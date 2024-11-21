@@ -295,9 +295,9 @@ const Sidebar = () => {
             <nav className="mt-14 flex flex-col gap-y-3.5 h-[400px]  pr-10">
             {navMenu.map((menu) => (
               <Link href={menu.path} key={menu.id}>
-                <button className="group flex items-center gap-x-3.5 bg-white hover:bg-chucky-primary active:bg-chucky-primary transition duration-300 ease-in-out rounded-xl p-5 w-full">
+                <button className="group flex items-center gap-x-3.5 bg-chucky-primary transition duration-300 ease-in-out rounded-xl p-5 w-full">
                   {menu.icon}
-                  <span className="font-[inter] text-chucky-gray-300 group-hover:text-white group-active:text-white font-bold transition ease-in-out">
+                  <span className="font-[inter] text-white font-bold transition ease-in-out">
                     {menu.title}
                   </span>
                 </button>
